@@ -19,6 +19,9 @@
 	if(!Modernizr.input.placeholder || !Modernizr.input.autofocus){
 		polyfillFeatures.push('forms');
 	}
+	if(!Modernizr.ES5){
+		polyfillFeatures.push('es5');
+	}
 	if(!Modernizr.input.date || !Modernizr.input.range) {
 		polyfillFeatures.push('forms-ext');
 	}
