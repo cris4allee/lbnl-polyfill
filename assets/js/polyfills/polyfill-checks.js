@@ -1,4 +1,5 @@
-(function($, window, undefined){
+(function(){
+
 	// Modernizr Polyfilling
 	Modernizr.load([
 		{
@@ -21,7 +22,7 @@
 	if(!Modernizr.input.date || !Modernizr.input.range) {
 		polyfillFeatures.push('forms-ext');
 	}
-	if(!Modernizr.localstorage || !Modernizr.sessionstorage || window.JSON) {
+	if(!Modernizr.localstorage || !Modernizr.sessionstorage || !Modernizr.json ) {
 		polyfillFeatures.push('json-storage');
 	}
 	if(!Modernizr.audio || !Modernizr.video) {
@@ -38,4 +39,4 @@
 
 
 
-})();
+}).call(this);
